@@ -34,7 +34,7 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 # APEX
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+# updatable_apex disabled for recovery
 
 # Authsecret
 PRODUCT_PACKAGES += \
@@ -47,7 +47,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service
 
 # Dalvik
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+# dalvik heap disabled for recovery
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := false
@@ -85,7 +85,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Storage
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+# emulated storage disabled for recovery
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
