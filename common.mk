@@ -101,3 +101,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
+# Kernel 5.4 does not support Android 16 default UFFD GC
+PRODUCT_ENABLE_UFFD_GC := false
